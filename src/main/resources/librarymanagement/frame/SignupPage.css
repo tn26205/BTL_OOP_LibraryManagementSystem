@@ -1,0 +1,60 @@
+.close{
+    -fx-background-color: transparent;
+    -fx-cursor:hand;
+}
+.close:hover{
+    -fx-background-color:#ff3547;
+}
+.right-form {
+    -fx-background-color:linear-gradient(to bottom right, #272b3f, #256b51) ;
+    -fx-border-color: #000;
+    -fx-border-width: 4px 0px .4px .4px;
+}
+.card-form {
+    -fx-background-color:linear-gradient(to bottom right, #272b3f, #1fac97);
+    -fx-background-radius: 15px;
+}
+
+
+.text-field{
+    -fx-background-color: transparent ;
+    -fx-text-inner-color:#fff;
+    -fx-border-color :#fff;
+    -fx-border-width: 0px 0px .2px 0px;
+    -fx-font-size: 15px;
+    -fx-font-family:"Arial"
+}
+text-filed:focused{
+    -fx-border-width:0px 0px .8px 0px;
+}
+.login-btn {
+    -fx-background-color:  #0073e6;
+    -fx-background-radius: 15px;
+}
+.login-btn:hover{
+    -fx-background-color:#003d99;
+}
+
+.signup-btn {
+    -fx-background-color:  #ff3547;
+    -fx-background-radius: 15px;
+}
+.signup-btn:hover{
+    -fx-background-color:#d32f3f
+}
+.minimize{
+    -fx-background-color: transparent;
+    -fx-cursor:hand;
+}
+.minimize:hover{
+    -fx-background-color:#5481ab;
+}
+.loginadmin{
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+    -fx-cursor:hand;
+}
+
+.loginadmin:hover{
+    -fx-text-fill:#2cc139;
+}

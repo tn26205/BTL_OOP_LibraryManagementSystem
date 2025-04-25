@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="750.0" styleClass="right-form" stylesheets="@SignupPage.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarymanagement.librarymanagementsystem.AdminLoginController">
+   <children>
+      <AnchorPane layoutX="53.0" layoutY="50.0" prefHeight="350.0" prefWidth="644.0" styleClass="card-form" stylesheets="@SignupPage.css">
+         <children>
+            <FontAwesomeIcon glyphName="USERS" layoutX="283.0" layoutY="85.0" size="6em" />
+            <Label layoutX="273.0" layoutY="118.0" text="Login Admin" textFill="#1fac97">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_admin" layoutX="238.0" layoutY="165.0" onAction="#loginAdmin" styleClass="text-field" stylesheets="@SignupPage.css" />
+            <PasswordField fx:id="txt_password" layoutX="238.0" layoutY="216.0" onAction="#loginAdmin" styleClass="text-field" stylesheets="@SignupPage.css" />
+            <FontAwesomeIcon glyphName="USER" layoutX="167.0" layoutY="189.0" size="3em" />
+            <FontAwesomeIcon glyphName="LOCK" layoutX="169.0" layoutY="242.0" size="3em" />
+            <Button fx:id="loginbtn" layoutX="249.0" layoutY="286.0" mnemonicParsing="false" onAction="#loginAdmin" prefHeight="32.0" prefWidth="166.0" styleClass="login-btn" stylesheets="@SignupPage.css" text="LOGIN" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="close" layoutX="690.0" layoutY="1.0" mnemonicParsing="false" onAction="#close" prefHeight="32.0" prefWidth="59.0" styleClass="close" stylesheets="@SignupPage.css" />
+      <Button fx:id="minus" layoutX="630.0" layoutY="1.0" mnemonicParsing="false" onAction="#minimize" prefHeight="32.0" prefWidth="59.0" styleClass="minimize" stylesheets="@SignupPage.css" />
+      <FontAwesomeIcon glyphName="CLOSE" layoutX="710.0" layoutY="26.0" size="2em" text="" />
+      <FontAwesomeIcon glyphName="MINUS" layoutX="650.0" layoutY="27.0" size="2em" text="" />
+   </children>
+</AnchorPane>

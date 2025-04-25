@@ -1,0 +1,198 @@
+.top-form{
+    -fx-background-color:#b5d3d9;
+    -fx-border-color:#000;
+    -fx-border-with:.2px .2px .5px 02px;
+}
+.close{
+    -fx-background-color: transparent;
+    -fx-cursor:hand;
+}
+.close:hover{
+    -fx-background-color:#ff3547;
+}
+.minimize{
+    -fx-background-color: transparent;
+    -fx-cursor:hand;
+}
+.minimize:hover{
+    -fx-background-color:#5481ab;
+}
+.edit-btn{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.nav-btn{
+    -fx-background-color:linear-gradient(to bottom right,#2ca6c4 , #3a6389);
+    -fx-background-radius:5px;
+    -fx-cursor:hand;
+    -fx-font-size:15px;
+    -fx-text-fill:#fff;
+    -fx-font-family:"Microsoft Sans Serif";
+}
+
+.nav-btn:hover{
+    -fx-background-color:linear-gradient(to bottom right, #2ca6c4, #4278a7);
+    -fx-background-radius:5px;
+}
+
+.logout-btn{
+    -fx-background-color:#366d9d;
+    -fx-background-radius:10px;
+    -fx-cursor:hand;
+}
+.logout-btn:hover{
+    -fx-background-color:#396fc6;
+    -fx-background-radius:10px;
+}
+.bars{
+    -fx-background-color:transparent;
+    -fx-background-radius:5px;
+    -fx-cursor:hand;
+}
+
+.bars:hover{
+    -fx-background-color:#d6d6d6;
+}
+
+.nav-btn{
+    -fx-background-color:linear-gradient(to bottom right, #b5d3d9, #3a6389);
+    -fx-background-radius:5px;
+    -fx-cursor:hand;
+    -fx-font-size:15px;
+    -fx-text-fill:#fff;
+    -fx-font-family:"Microsoft Sans Serif";
+}
+
+.nav-btn:hover{
+    -fx-background-color:linear-gradient(to bottom right, #b5d3d9, #4278a7);
+    -fx-background-radius:5px;
+}
+.semiTop-form{
+    -fx-background-color : #dddddd;
+    -fx-border-color:#000;
+    -fx-border-width:0px 0px .5px 0px;
+}
+.card-form{
+    -fx-background-color:#f8f8f8;
+    -fx-border-color:#454368;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+}
+.add-btn {
+    -fx-background-color:#dc790f;
+    -fx-cursor:hand;
+}
+.add-btn:hover{
+    -fx-background-color:#ff3547;
+}
+.label_take{
+    -fx-background-color:#fff;
+    -fx-padding:0px 0px 0px 8px;
+    -fx-font-size:14px;
+    -fx-border-color:#000;
+    -fx-border-radius:5px;
+    -fx-border-width:.4px;
+    -fx-background-radius:5px;
+}
+/* styles.css */
+.table-column-header {
+    -fx-background-color: #d1af1b; /* Đặt màu nền cho tiêu đề cột */
+    -fx-text-fill: white; /* Đặt màu chữ cho tiêu đề cột */
+    -fx-font-weight: bold; /* Đặt chữ in đậm cho tiêu đề cột */
+}
+.search{
+    -fx-background-color: #1575bf;
+    -fx-cursor:hand;
+}
+.search:hover{
+    -fx-background-color:#df4e0b;
+}
+.label_take{
+    -fx-background-color:#fff;
+    -fx-padding:0px 0px 0px 8px;
+    -fx-font-size:14px;
+    -fx-border-color:#000;
+    -fx-border-radius:5px;
+    -fx-border-width:.4px;
+    -fx-background-radius:5px;
+}
+
+.label:hover { -fx-text-fill: green; /* Màu chữ khi di chuột qua hoặc chạm vào */ }
+.a_tim {
+    -fx-background-color: #FF69B4; /* Màu tím */
+}
+
+.a_vang {
+    -fx-background-color: #FFD700; /* Màu vàng */
+}
+
+.a_xan {
+    -fx-background-color: #00FF00; /* Màu xanh */
+}
+.a_tim1 {
+    -fx-background-color: #FFB6C9; /* Màu tím nhạt */
+}
+
+.a_vang1 {
+    -fx-background-color: #FFFACD; /* Màu vàng nhạt */
+}
+
+.a_xan1{
+    -fx-background-color: #98FB98; /* Màu xanh nhạt */
+}
+.a {
+    -fx-background-color:#17b3d9;
+}
+/* Style cho ScrollPane */
+.scroll-pane {
+    -fx-background: transparent;
+    -fx-padding: 10;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+}
+
+/* Style cho HBox hoặc FlowPane chứa các ảnh */
+.image-container {
+    -fx-spacing: 15;
+    -fx-alignment: center;
+    -fx-padding: 10;
+}
+
+/* Style cho từng ImageView */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 0, 2);
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s ease;
+}
+
+.image-view:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 15, 0, 0, 4);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-border-color: #2c7ef9;
+}
+
+/* Style cho Label chú thích dưới mỗi ảnh */
+.image-caption {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+
+/* Tùy chỉnh thanh cuộn cho ScrollPane */
+.scroll-pane .scroll-bar:horizontal .thumb {
+    -fx-background-color: #2c7ef9;
+    -fx-background-radius: 5;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #2c7ef9;
+    -fx-background-radius: 5;
+}
+
+

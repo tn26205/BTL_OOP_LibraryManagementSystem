@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarymanagement.librarymanagementsystem.HomePageController">
+   <left>
+      <AnchorPane prefHeight="617.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="halfNav_form" layoutX="-1.0" layoutY="56.0" prefHeight="566.0" prefWidth="76.0" style="-fx-background-color: #344275;">
+               <children>
+                  <Circle fill="#ff841f" layoutX="38.0" layoutY="41.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="25.0" layoutY="53.0" size="2.5EM" />
+                  <Separator layoutX="9.0" layoutY="77.0" prefHeight="2.0" prefWidth="59.0" />
+                  <Button fx:id="halfNav_homeBtn" layoutX="10.0" layoutY="119.0" minWidth="51.0" mnemonicParsing="false" onAction="#sideNavButtonDesign" prefHeight="45.0" prefWidth="51.0" styleClass="nav-btn" stylesheets="@HomePage.css" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="100.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="HOME" size="3EM" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="halfNav_borrowBtn" layoutX="10.0" layoutY="187.0" minWidth="51.0" mnemonicParsing="false" onAction="#sideNavButtonDesign" prefHeight="45.0" prefWidth="51.0" styleClass="nav-btn" stylesheets="@HomePage.css" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="180.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="BOOK" size="2.5em" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="halfNav_returnBtn" layoutX="9.0" layoutY="255.0" minWidth="51.0" mnemonicParsing="false" onAction="#sideNavButtonDesign" prefHeight="45.0" prefWidth="51.0" styleClass="nav-btn" stylesheets="@HomePage.css" AnchorPane.topAnchor="260.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="FILE" size="2.25EM" wrappingWidth="22.30476188659668" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="halfNav_favouriteBtn" layoutX="9.0" layoutY="321.0" minWidth="51.0" mnemonicParsing="false" onAction="#sideNavButtonDesign" prefHeight="45.0" prefWidth="51.0" styleClass="nav-btn" stylesheets="@HomePage.css" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="340.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="BOOKMARK" size="2.5EM" wrappingWidth="22.785715103149414" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="BUTTON_SIGNOUT2" layoutX="8.0" layoutY="391.0" minWidth="51.0" mnemonicParsing="false" onAction="#logout" prefHeight="45.0" prefWidth="51.0" styleClass="nav-btn" stylesheets="@HomePage.css" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="420.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="3em" wrappingWidth="37.78571319580078" />
+                     </graphic></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="nav_form" layoutX="-1.0" layoutY="56.0" prefHeight="565.0" prefWidth="223.0" style="-fx-background-color: #344275;" styleClass="nav-btn" stylesheets="@HomePage.css">
+               <children>
+                  <Button fx:id="HOME" layoutX="29.0" layoutY="225.0" mnemonicParsing="false" onAction="#navButtonDesign" prefHeight="48.0" prefWidth="164.0" styleClass="nav-btn" stylesheets="@HomePage.css" text="HOME" AnchorPane.leftAnchor="29.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="52.0" layoutY="258.0" size="2em" wrappingWidth="24.85714340209961" />
+                  <Button fx:id="BORROWED_BOOKS" layoutX="29.0" layoutY="295.0" mnemonicParsing="false" onAction="#navButtonDesign" prefHeight="48.0" prefWidth="164.0" style="-fx-font-size: 14.5;" styleClass="nav-btn" stylesheets="@HomePage.css" text="BORROWED BOOKS" AnchorPane.leftAnchor="29.0" />
+                  <Button fx:id="RETURNED_BOOKS" layoutX="25.0" layoutY="365.0" mnemonicParsing="false" onAction="#navButtonDesign" prefHeight="48.0" prefWidth="164.0" style="-fx-font-size: 14.5;" styleClass="nav-btn" stylesheets="@HomePage.css" text="FAVOURITE BOOKS" AnchorPane.leftAnchor="29.0" />
+                  <Button fx:id="FAVORITE_BOOKS" layoutX="34.0" layoutY="435.0" mnemonicParsing="false" onAction="#navButtonDesign" prefHeight="48.0" prefWidth="164.0" style="-fx-font-size: 14.5;" styleClass="nav-btn" stylesheets="@HomePage.css" text="RETURNED BOOKS" AnchorPane.leftAnchor="29.0" />
+                  <Button fx:id="BUTTON_SIGNOUT" layoutX="85.0" layoutY="497.0" minWidth="41.0" mnemonicParsing="false" onAction="#logout" prefHeight="36.0" prefWidth="41.0" styleClass="nav-btn" stylesheets="@HomePage.css" AnchorPane.leftAnchor="85.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                     </graphic>
+                  </Button>
+                  <Label fx:id="SIGNOUT" layoutX="72.0" layoutY="539.0" prefHeight="25.0" prefWidth="70.0" style="-fx-font-size: 18; -fx-text-fill: #fff;" text="Sign out" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="72.0" />
+                  <Label fx:id="studentNumber_label" alignment="CENTER" layoutX="25.0" layoutY="147.0" prefHeight="28.0" prefWidth="177.0" style="-fx-font-size: 20; -fx-text-fill: #fff;" text="Account" textAlignment="CENTER" />
+                  <Circle fill="#ff841f" layoutX="110.0" layoutY="87.0" radius="60.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.topAnchor="20.0" />
+                  <ImageView fx:id="image_user" fitHeight="120.0" fitWidth="122.0" layoutX="46.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="48.0" AnchorPane.topAnchor="20.0" />
+                  <Button fx:id="selectImageUser" layoutX="71.0" layoutY="43.0" mnemonicParsing="false" onAction="#selectImageUserBtn" prefHeight="90.0" prefWidth="80.0" styleClass="edit-btn" stylesheets="@HomePageAdmin.css" />
+                  <FontAwesomeIcon fx:id="editfont" glyphName="EDIT" layoutX="102.0" layoutY="83.0" text="" />
+                  <Label fx:id="studentEmail_label" alignment="CENTER" layoutX="18.0" layoutY="181.0" prefHeight="24.0" prefWidth="176.0" style="-fx-font-size: 18;" text="email" />
+                  <ImageView fx:id="studentImage_imageView" fitHeight="58.0" fitWidth="52.0" layoutX="157.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="28.0" prefWidth="900.0" stylesheets="@HomePage.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="821.0" layoutY="15.0" mnemonicParsing="false" onAction="#close" prefHeight="33.0" prefWidth="54.0" styleClass="close-btn" stylesheets="@HomePage.css" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIcon glyphName="CLOSE" />
+               </graphic>
+            </Button>
+            <Button fx:id="minus" layoutX="300.0" layoutY="15.0" minWidth="45.0" mnemonicParsing="false" onAction="#minimize" prefHeight="33.0" prefWidth="54.0" styleClass="minimize-btn" stylesheets="@HomePage.css" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIcon glyphName="MINUS" />
+               </graphic>
+            </Button>
+            <AnchorPane layoutX="283.0" layoutY="33.0" prefHeight="57.0" prefWidth="900.0" style="-fx-background-color: #200c68;" stylesheets="@HomePage.css" AnchorPane.bottomAnchor="-57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+               <children>
+                  <Button fx:id="MENU" contentDisplay="CENTER" layoutX="32.0" layoutY="7.0" minWidth="47.0" mnemonicParsing="false" onAction="#sliderBars" prefHeight="44.0" prefWidth="47.0" style="-fx-background-color: #200c68;" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="7.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="BARS" size="3em" wrappingWidth="32.21904754638672" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="BACK" contentDisplay="CENTER" layoutX="106.0" layoutY="8.0" minWidth="47.0" mnemonicParsing="false" onAction="#sliderArrow" prefHeight="44.0" prefWidth="47.0" style="-fx-background-color: #200c68;" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="7.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" size="3em" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane fx:id="mainCenter_form" prefHeight="555.0" prefWidth="748.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="borrow_form" layoutX="8.0" layoutY="53.0" prefHeight="563.0" prefWidth="704.0" visible="false" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="57.0">
+               <children>
+                  <AnchorPane fx:id="favourite_Borrow" layoutX="20.0" layoutY="7.0" prefHeight="551.0" prefWidth="278.0" styleClass="card-form" stylesheets="@HomePage.css" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <AnchorPane fx:id="BOOK1" layoutX="60.0" layoutY="23.0" prefHeight="217.0" prefWidth="166.0">
+                           <children>
+                              <ImageView fx:id="favourite_imageView" fitHeight="217.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="12.0" layoutY="258.0" prefHeight="200.0" prefWidth="255.0" styleClass="card-form" stylesheets="@HomePage.css">
+                           <children>
+                              <Label layoutX="11.0" layoutY="20.0" style="-fx-font-size: 15;" stylesheets="@HomePage.css" text="Titile:" AnchorPane.leftAnchor="8.0" />
+                              <Label layoutX="8.0" layoutY="70.0" style="-fx-font-size: 15;" stylesheets="@HomePage.css" text="Author:" AnchorPane.leftAnchor="8.0" />
+                              <Label layoutX="7.0" layoutY="110.0" style="-fx-font-size: 15;" stylesheets="@HomePage.css" text="Genre:" AnchorPane.leftAnchor="8.0" />
+                              <Label layoutX="6.0" layoutY="152.0" style="-fx-font-size: 15;" stylesheets="@HomePage.css" text="Pulished Date:" AnchorPane.leftAnchor="8.0" />
+                              <Label fx:id="favourite_title_label" layoutX="53.0" layoutY="19.0" prefHeight="27.0" prefWidth="191.0" style="-fx-font-size: 18;" stylesheets="@HomePage.css" />
+                              <Label fx:id="favourite_author_label" layoutX="68.0" layoutY="70.0" prefHeight="24.0" prefWidth="172.0" style="-fx-font-size: 15;" />
+                              <Label fx:id="favourite_genre_label" layoutX="60.0" layoutY="110.0" prefHeight="21.0" prefWidth="185.0" style="-fx-font-size: 15;" />
+                              <Label fx:id="favourite_date_label" layoutX="108.0" layoutY="155.0" prefHeight="21.0" prefWidth="140.0" style="-fx-font-size: 15;" />
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="FAVORITE1" layoutX="36.0" layoutY="482.0" mnemonicParsing="false" onAction="#borrowBook" prefHeight="32.0" prefWidth="94.0" style="-fx-text-fill: #000; -fx-background-color: #e2c72d;" styleClass="save-btn" stylesheets="@HomePage.css" text="BORROW" AnchorPane.topAnchor="480.0" />
+                        <Button fx:id="favourite_clearBtn" layoutX="154.0" layoutY="480.0" mnemonicParsing="false" onAction="#clearTakeData" prefHeight="32.0" prefWidth="93.0" style="-fx-text-fill: #000; -fx-background-color: #BCBBAD;" styleClass="save-btn" stylesheets="@HomePage.css" text="CLEAR" AnchorPane.topAnchor="480.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="334.0" layoutY="8.0" prefHeight="551.0" prefWidth="383.0" styleClass="card-form" stylesheets="@HomePage.css" AnchorPane.leftAnchor="312.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="11.0" style="-fx-font-size: 28;" stylesheets="@HomePage.css" text="Student details:" />
+                        <Label layoutX="29.0" layoutY="66.0" text="Student Number :" AnchorPane.leftAnchor="22.0" />
+                        <Label layoutX="29.0" layoutY="119.0" text="First Name :" AnchorPane.leftAnchor="22.0" />
+                        <Label layoutX="28.0" layoutY="168.0" text="Last Name :" AnchorPane.leftAnchor="22.0" />
+                        <Label layoutX="28.0" layoutY="220.0" text="Gender :" AnchorPane.leftAnchor="22.0" />
+                        <Label layoutX="8.0" layoutY="290.0" style="-fx-font-size: 28;" stylesheets="@HomePage.css" text="Book details:" />
+                        <Label fx:id="favourite_StudentNumber" layoutX="142.0" layoutY="61.0" prefHeight="34.0" prefWidth="207.0" styleClass="label_take" stylesheets="@HomePage.css" text="Label" AnchorPane.topAnchor="60.0" />
+                        <ComboBox fx:id="favourite_Genre" layoutX="142.0" layoutY="215.0" onAction="#gender" prefHeight="34.0" prefWidth="207.0" promptText="choose" styleClass="textfield_take" stylesheets="@HomePage.css" />
+                        <Label layoutX="31.0" layoutY="349.0" text="Book Title :" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="349.0" />
+                        <Label layoutX="28.0" layoutY="415.0" text="Borrow Date :" AnchorPane.leftAnchor="22.0" />
+                        <Label fx:id="favourite_BorrowDate" layoutX="142.0" layoutY="408.0" prefHeight="34.0" prefWidth="207.0" styleClass="label_take" stylesheets="@HomePage.css" text="Label" />
+                        <TextField fx:id="favourite_Firstname" layoutX="142.0" layoutY="110.0" prefHeight="34.0" prefWidth="207.0" stylesheets="@HomePage.css" />
+                        <TextField fx:id="favourite_Lastname" layoutX="142.0" layoutY="174.0" prefHeight="34.0" prefWidth="207.0" stylesheets="@HomePage.css" AnchorPane.topAnchor="160.0" />
+                        <TextField fx:id="favourite_BookTitle" layoutX="142.0" layoutY="346.0" onAction="#findBook" prefHeight="34.0" prefWidth="207.0" stylesheets="@HomePage.css" AnchorPane.topAnchor="342.0" />
+                     </children>
+                  </AnchorPane>
+                  <Separator layoutX="294.0" layoutY="8.0" orientation="VERTICAL" prefHeight="544.0" prefWidth="19.0" AnchorPane.leftAnchor="301.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="availableBook_form" layoutX="29.0" layoutY="57.0" prefHeight="560.0" prefWidth="664.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="57.0">
+               <children>
+                  <AnchorPane layoutX="7.0" layoutY="8.0" prefHeight="301.0" prefWidth="247.0" styleClass="card-form" stylesheets="@HomePage.css" AnchorPane.bottomAnchor="256.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="8.0">
+                     <children>
+                        <Button fx:id="FAVORITE" layoutX="23.0" layoutY="248.0" mnemonicParsing="false" onAction="#saveBooks" prefHeight="32.0" prefWidth="94.0" style="-fx-text-fill: #000; -fx-background-color: #e2c72d;" styleClass="save-btn" stylesheets="@HomePage.css" text="SAVE" AnchorPane.topAnchor="248.0" />
+                        <Button fx:id="BORROW" layoutX="124.0" layoutY="243.0" mnemonicParsing="false" onAction="#abBorrowButaton" prefHeight="32.0" prefWidth="93.0" style="-fx-text-fill: #000; -fx-background-color: #16660a;" styleClass="save-btn" stylesheets="@HomePage.css" text="BORROW" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="248.0" />
+                        <Label fx:id="TITLE" alignment="CENTER" layoutX="5.0" layoutY="195.0" prefHeight="30.0" prefWidth="237.0" style="-fx-font-size: 16; -fx-text-fill: #16167A;" styleClass="card-form" stylesheets="@HomePage.css" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="195.0" />
+                        <Label fx:id="AUTHOR" alignment="CENTER" layoutX="90.0" layoutY="157.0" prefHeight="27.0" prefWidth="69.0" style="-fx-font-size: 18; -fx-text-fill: #16167A;" text="Title" textAlignment="CENTER" />
+                        <AnchorPane fx:id="BOOK" layoutX="48.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="105.0" styleClass="label_take" stylesheets="@HomePage.css" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="6.0">
+                           <children>
+                              <ImageView fx:id="homeBooks_imageView" fitHeight="152.0" fitWidth="110.0" layoutX="-1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="-11.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="-5.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="257.0" layoutY="13.0" prefHeight="553.0" prefWidth="423.0" styleClass="card-form" stylesheets="@HomePage.css" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="257.0" AnchorPane.topAnchor="8.0">
+                     <children>
+                        <TableView fx:id="availableBook_table" layoutX="6.0" layoutY="10.0" onMouseClicked="#selectionAvailableBooks" prefHeight="540.0" prefWidth="414.0" stylesheets="@HomePage.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+                           <columns>
+                              <TableColumn fx:id="Book_Title" prefWidth="132.3333740234375" text="Book Title" />
+                              <TableColumn fx:id="Author" prefWidth="88.6666259765625" text="Author" />
+                              <TableColumn fx:id="Book_Type" prefWidth="81.66668701171875" text="Book Type" />
+                              <TableColumn fx:id="Published_Date" prefWidth="112.66668701171875" text="Published Date" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="196.0" fitWidth="180.0" layoutX="34.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/5ff12887-7412-4afa-aa80-994a5ec4edd3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="savedBook_form" layoutX="32.0" layoutY="55.0" prefHeight="562.0" prefWidth="682.0" visible="false">
+               <children>
+                  <AnchorPane layoutX="237.0" layoutY="7.0" prefHeight="553.0" prefWidth="441.0" styleClass="card-form" stylesheets="@HomePage.css" AnchorPane.topAnchor="7.0">
+                     <children>
+                        <Label layoutX="19.0" layoutY="17.0" text="Issued Books" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="return_tableView" layoutX="6.0" layoutY="44.0" onMouseClicked="#selectReturnBook" prefHeight="504.0" prefWidth="433.0">
+                          <columns>
+                            <TableColumn fx:id="return_bookTitle" prefWidth="146.6666259765625" text="Book Title" />
+                              <TableColumn fx:id="return_author" prefWidth="92.3333740234375" text="Author" />
+                              <TableColumn fx:id="return_bookType" minWidth="0.0" prefWidth="89.66668701171875" text="Book Type" />
+                              <TableColumn fx:id="return_dateIssued" minWidth="0.0" prefWidth="104.33331298828125" text="Date Issued" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="12.0" layoutY="30.0" prefHeight="255.0" prefWidth="221.0" styleClass="card-form" stylesheets="@HomePage.css" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="449.0">
+                     <children>
+                        <AnchorPane layoutX="52.0" layoutY="22.0" prefHeight="159.0" prefWidth="113.0" styleClass="image-card" stylesheets="@HomePage.css" AnchorPane.leftAnchor="52.0">
+                           <children>
+                              <ImageView fx:id="return_imageView" fitHeight="155.0" fitWidth="111.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="return_button" layoutX="74.0" layoutY="194.0" mnemonicParsing="false" onAction="#returnBooks" prefHeight="30.0" prefWidth="69.0" styleClass="take-btn" stylesheets="@HomePage.css" text="Return" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="194.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="12.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="1.0" />
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Separator orientation="VERTICAL" prefHeight="543.0" prefWidth="0.0" AnchorPane.leftAnchor="233.0" AnchorPane.topAnchor="13.0" />
+                  <ImageView fitHeight="238.0" fitWidth="171.0" layoutX="37.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/26d46cbb-1a2f-44ad-9055-5390954ba52f.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="returnBook_form" layoutX="32.0" layoutY="58.0" prefHeight="564.0" prefWidth="682.0">
+               <children>
+                  <AnchorPane layoutX="12.0" layoutY="4.0" prefHeight="554.0" prefWidth="670.0" styleClass="card-form" stylesheets="@HomePage.css">
+                     <children>
+                        <TableView fx:id="save_tableView" layoutX="6.0" layoutY="3.0" onMouseClicked="#selectSavedBooks" prefHeight="290.0" prefWidth="659.0">
+                          <columns>
+                            <TableColumn fx:id="col_saveTitle" prefWidth="249.0" text="Book Title" />
+                            <TableColumn fx:id="col_saveAuthor" prefWidth="132.0" text="Author" />
+                              <TableColumn fx:id="col_saveGenre" prefWidth="129.0" text="Publisher" />
+                              <TableColumn fx:id="col_saveDate" prefWidth="133.0" text="Published Date" />
+                          </columns>
+                        </TableView>
+                        <AnchorPane layoutX="58.0" layoutY="308.0" prefHeight="210.0" prefWidth="178.0" styleClass="image-card" stylesheets="@HomePage.css">
+                           <children>
+                              <ImageView fx:id="save_imageView" fitHeight="202.0" fitWidth="160.0" layoutX="9.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="unsaveBtn" layoutX="288.0" layoutY="371.0" mnemonicParsing="false" onAction="#unsaveBooks" prefHeight="43.0" prefWidth="94.0" styleClass="take-btn" stylesheets="@HomePage.css" text="Usave" />
+                        <Button fx:id="generateQRCode" layoutX="286.0" layoutY="439.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="94.0" styleClass="save-btn" stylesheets="@HomePage.css" text="QR" />
+                        <AnchorPane fx:id="qrCode" layoutX="444.0" layoutY="326.0" prefHeight="161.0" prefWidth="167.0" styleClass="image-card" stylesheets="@HomePage.css">
+                           <children>
+                              <ImageView fx:id="qrImage" fitHeight="168.0" fitWidth="167.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            <Label fx:id="current_form_label" layoutX="484.0" layoutY="15.0" text="Available Book" textFill="#cbc5f5">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="269.0" layoutY="32.0" text="Student Portal" textFill="#d3a7a7">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="6.0" prefHeight="45.0" prefWidth="257.0" style="-fx-font-size: 30; -fx-text-fill: #fff;" stylesheets="@HomePage.css" text="WELCOM LIBRARY" textAlignment="CENTER" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="6.0" />
+            <Line endX="13.333343505859375" endY="29.566665649414062" layoutX="421.0" layoutY="15.0" startX="13.333343505859375" startY="-2.433330535888672" stroke="#f5f4f4" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

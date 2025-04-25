@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="330.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarymanagement.librarymanagementsystem.BookGenresController">
+   <children>
+      <BorderPane prefHeight="330.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="63.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="64.0" prefWidth="600.0" styleClass="semiTop-form" stylesheets="@HomePageAdmin.css">
+                     <children>
+                        <Label layoutX="178.0" layoutY="12.0" text="Manage Books Genres " textFill="#86cf1b">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="close" layoutX="540.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="59.0" styleClass="close" stylesheets="@SignupPage.css">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="CLOSE" size="2em" />
+                           </graphic>
+                        </Button>
+                        <ImageView fitHeight="92.0" fitWidth="156.0" layoutX="14.0" layoutY="5.0">
+                           <image>
+                              <Image url="@SignupPage.png/book-1773756_640.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="266.0" prefWidth="237.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="11.0" layoutY="15.0" prefHeight="122.0" prefWidth="214.0" styleClass="card-form" stylesheets="@HomePageAdmin.css">
+                     <children>
+                        <TextField fx:id="txt_name" layoutX="60.0" layoutY="71.0" prefHeight="26.0" prefWidth="128.0" promptText="Enter name" />
+                        <Label layoutX="22.0" layoutY="75.0" text="Name" />
+                        <TextField fx:id="txt_id" layoutX="60.0" layoutY="26.0" prefHeight="26.0" prefWidth="128.0" promptText="Enter name" />
+                        <Label layoutX="24.0" layoutY="31.0" text="ID" />
+                     </children>
+                  </AnchorPane>
+                  <Separator layoutX="240.0" layoutY="6.0" orientation="VERTICAL" prefHeight="247.0" prefWidth="4.0" />
+                  <Button fx:id="add_btn" layoutX="22.0" layoutY="180.0" mnemonicParsing="false" onAction="#addBtn" styleClass="add-btn" stylesheets="@HomePageAdmin.css" text="Add" textFill="#000000ab" />
+                  <Button fx:id="edit_btn" layoutX="97.0" layoutY="180.0" mnemonicParsing="false" onAction="#editBtn" prefHeight="26.0" prefWidth="45.0" styleClass="add-btn" stylesheets="@HomePageAdmin.css" text="Edit" />
+                  <Button fx:id="delete_btn" layoutX="173.0" layoutY="180.0" mnemonicParsing="false" onAction="#deleteBtn" styleClass="add-btn" stylesheets="@HomePageAdmin.css" text="Delete" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="342.0" prefWidth="338.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="15.0" layoutY="7.0" prefHeight="250.0" prefWidth="334.0" styleClass="card-form" stylesheets="@HomePageAdmin.css">
+                     <children>
+                        <TableView fx:id="bookGenresTable" layoutX="14.0" layoutY="14.0" prefHeight="224.0" prefWidth="310.0" styleClass="table-column-header" stylesheets="@HomePageAdmin.css">
+                          <columns>
+                            <TableColumn fx:id="col_id" prefWidth="69.59997367858887" text="ID" />
+                            <TableColumn fx:id="col_name" prefWidth="241.60004425048828" text="Name" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

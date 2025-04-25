@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarymanagement.librarymanagementsystem.AuthorManageController">
+   <children>
+      <BorderPane prefHeight="330.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="63.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="98.0" prefWidth="900.0" styleClass="semiTop-form" stylesheets="@HomePageAdmin.css">
+                     <children>
+                        <Label layoutX="328.0" layoutY="17.0" text="Manage Authors " textFill="#cf5c1d">
+                           <font>
+                              <Font size="43.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="close" layoutX="840.0" layoutY="5.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="59.0" styleClass="close" stylesheets="@SignupPage.css">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="CLOSE" size="2em" />
+                           </graphic>
+                        </Button>
+                        <ImageView fitHeight="125.0" fitWidth="127.0" layoutX="81.0" layoutY="8.0">
+                           <image>
+                              <Image url="@SignupPage.png/pencil-152713_640.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="266.0" prefWidth="237.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="11.0" layoutY="15.0" prefHeight="478.0" prefWidth="226.0" styleClass="card-form" stylesheets="@HomePageAdmin.css">
+                     <children>
+                        <TextField fx:id="txt_fname" layoutX="16.0" layoutY="100.0" onAction="#addBtn" prefHeight="26.0" prefWidth="194.0" promptText="Enter first name" />
+                        <Label layoutX="15.0" layoutY="73.0" prefHeight="20.0" prefWidth="77.0" text="First Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label layoutX="24.0" layoutY="31.0" />
+                        <Label layoutX="15.0" layoutY="265.0" prefHeight="20.0" prefWidth="77.0" text="About">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="206.0" prefHeight="20.0" prefWidth="77.0" text="Expertise">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="136.0" prefHeight="20.0" prefWidth="77.0" text="Last Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_expertise" layoutX="13.0" layoutY="239.0" onAction="#addBtn" prefHeight="26.0" prefWidth="199.0" promptText="Enter expertise" />
+                        <TextField fx:id="txt_lname" layoutX="14.0" layoutY="171.0" onAction="#addBtn" prefHeight="26.0" prefWidth="194.0" promptText="Enter first name" />
+                        <TextArea fx:id="txt_about" layoutX="13.0" layoutY="285.0" onDragDetected="#addBtn" prefHeight="186.0" prefWidth="200.0" />
+                        <TextField fx:id="txt_id" editable="false" layoutX="14.0" layoutY="35.0" onAction="#addBtn" prefHeight="26.0" prefWidth="194.0" />
+                        <Label layoutX="15.0" layoutY="14.0" prefHeight="20.0" prefWidth="44.0" text="ID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator layoutX="242.0" layoutY="6.0" orientation="VERTICAL" prefHeight="516.0" prefWidth="10.0" />
+                  <Button fx:id="add_btn" layoutX="14.0" layoutY="506.0" mnemonicParsing="false" onAction="#addBtn" styleClass="add-btn" stylesheets="@HomePageAdmin.css" text="Add" textFill="#000000ab" />
+                  <Button fx:id="edit_btn" layoutX="95.0" layoutY="505.0" mnemonicParsing="false" onAction="#editBtn" prefHeight="26.0" prefWidth="45.0" styleClass="add-btn" stylesheets="@HomePageAdmin.css" text="Edit" />
+                  <Button fx:id="delete_btn" layoutX="174.0" layoutY="506.0" mnemonicParsing="false" onAction="#deleteBtn" styleClass="add-btn" stylesheets="@HomePageAdmin.css" text="Delete" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="342.0" prefWidth="338.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="534.0" prefWidth="630.0" styleClass="card-form" stylesheets="@HomePageAdmin.css">
+                     <children>
+                        <TableView fx:id="AuthorTable" layoutX="15.0" layoutY="14.0" prefHeight="518.0" prefWidth="606.0" styleClass="table-column-header" stylesheets="@HomePageAdmin.css">
+                          <columns>
+                            <TableColumn fx:id="col_id" prefWidth="44.799983978271484" text="ID" />
+                            <TableColumn fx:id="col_fname" prefWidth="100.0" text="First Name" />
+                              <TableColumn fx:id="col_lname" prefWidth="106.40007019042969" text="Last Name" />
+                              <TableColumn fx:id="col_expertise" prefWidth="123.99993896484375" text="Expertise" />
+                              <TableColumn fx:id="col_about" prefWidth="236.0" text="About" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

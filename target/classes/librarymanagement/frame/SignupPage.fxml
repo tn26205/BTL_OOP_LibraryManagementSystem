@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarymanagement.librarymanagementsystem.SignupPageController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="650.0" fitWidth="550.0">
+               <image>
+                  <Image url="@SignupPage.png/signup-library-icon.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="550.0" prefHeight="650.0" prefWidth="350.0" styleClass="right-form" stylesheets="@SignupPage.css">
+               <children>
+                  <Button fx:id="close" layoutX="288.0" layoutY="1.0" mnemonicParsing="false" onAction="#close" prefHeight="34.0" prefWidth="63.0" styleClass="close" stylesheets="@SignupPage.css" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="310.0" layoutY="26.0" size="2em" styleClass="close" />
+                  <Label layoutX="60.0" layoutY="153.0" text="Username" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="60.0" layoutY="241.0" text="Password" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="60.0" layoutY="325.0" text="Email" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="65.0" layoutY="411.0" text="Contact" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_username" layoutX="75.0" layoutY="196.0" onAction="#buttonSignUp" promptText="Enter username" />
+                  <TextField fx:id="txt_email" layoutX="75.0" layoutY="368.0" onAction="#buttonSignUp" promptText="Enter email" />
+                  <TextField fx:id="txt_contact" layoutX="75.0" layoutY="458.0" onAction="#buttonSignUp" promptText="Enter contact" />
+                  <PasswordField fx:id="txt_password" layoutX="75.0" layoutY="288.0" onAction="#buttonSignUp" promptText="Enter password" />
+                  <Button fx:id="signupbtn" layoutX="90.0" layoutY="513.0" mnemonicParsing="false" onAction="#buttonSignUp" prefHeight="46.0" prefWidth="177.0" styleClass="signup-btn" stylesheets="@SignupPage.css" text="SIGNUP">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <ImageView layoutX="14.0" layoutY="197.0">
+                     <image>
+                        <Image url="@SignupPage.png/icons8_Account_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="14.0" layoutY="433.0">
+                     <image>
+                        <Image url="@SignupPage.png/icons8_Google_Mobile_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="10.0" layoutY="276.0">
+                     <image>
+                        <Image url="@SignupPage.png/icons8_Secure_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="14.0" layoutY="356.0">
+                     <image>
+                        <Image url="@SignupPage.png/icons8_Secured_Letter_50px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="104.0" layoutY="51.0" text="Signup Page" textFill="WHITE">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="110.0" layoutY="91.0" text="Create New Account Here" textFill="WHITE" />
+                  <Button fx:id="loginbtn" layoutX="90.0" layoutY="579.0" mnemonicParsing="false" onAction="#buttonLogin" prefHeight="46.0" prefWidth="178.0" styleClass="login-btn" stylesheets="@SignupPage.css" text="LOGIN">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="minus" layoutX="220.0" layoutY="4.0" mnemonicParsing="false" onAction="#minimize" prefHeight="32.0" prefWidth="69.0" styleClass="minimize" stylesheets="@SignupPage.css" />
+                  <FontAwesomeIcon />
+                  <FontAwesomeIcon fill="WHITE" glyphName="MINUS" layoutX="244.0" layoutY="28.0" size="2em" styleClass="minimize" text="" />
+                  <Button fx:id="adminlogin" layoutX="221.0" layoutY="119.0" mnemonicParsing="false" onAction="#buttonAdminLogin" styleClass="loginadmin" stylesheets="@SignupPage.css" text="login as admin" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="219.0" layoutY="29.0" text="Welcom To" textFill="#ff1010">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="125.0" layoutY="71.0" text="Our Library Management System " textFill="#331ccc">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
